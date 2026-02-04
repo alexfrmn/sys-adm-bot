@@ -1,0 +1,1 @@
+/opt/lifecoach/vault/.claude/skills/deaify-text/SKILL.md

@@ -1,8 +1,14 @@
 """Configuration for sys-adm channel bot."""
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Telegram
-BOT_TOKEN = "8279182449:AAGTabUD2Zqba-7J-6OG_UZHXxwlORiLHdw"
-CHANNEL_ID = "@sys_adm"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHANNEL_ID = os.getenv("CHANNEL_ID", "@sys_adm")
+ADMIN_ID = int(os.getenv("ADMIN_ID", "219787633"))
 
 # Paths
 QUEUE_FILE = "/opt/lifecoach/sys-adm-bot/queue.json"
